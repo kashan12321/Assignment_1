@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web Developer Application Form</title>
+    
 </head>
-<body>
-    <h1>form save</h1>
+<body style="background-color: burlywood;">
+    
+    <h1>Web Developer Application Form</h1>
+
+    <form>
+        <fieldset>
+        <!-- Step 1: Personal Information -->
+        <h3>Step 1: Personal Information</h3>
+        <label>Full Name:</label><br>
+        <input type="text" name="fullname"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email"><br><br>
+
+        <label>Phone (11 digits):</label><br>
+        <input type="text" name="phone" placeholder="03XXXXXXXXX"><br><br>
+
+        <label>Date of Birth:</label><br>
+        <input type="date" name="dob"><br><br>
+        </fieldset>
+
+        <fieldset>
+        <!-- Step 2: Skills & Experience -->
+        <h3>Step 2: Skills & Experience</h3>
+        <label>Select Skills:</label><br>
+        <input type="checkbox" name="skills" value="HTML"> HTML
+        <input type="checkbox" name="skills" value="CSS"> CSS
+        <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+        <input type="checkbox" name="skills" value="React"> React<br><br>
+
+        <label>Years of Experience:</label><br>
+        <input type="text" name="experience"><br><br>
+
+        <label>Upload Resume (PDF):</label><br>
+        <input type="file" accept=".pdf" name="resume"><br><br>
+        
+
+        <label>Portfolio Link:</label><br>
+        <input type="url" name="portfolio" placeholder="https://"><br><br>
+        </fieldset>
+
+        <fieldset>
+<!-- Step 3: Availability & Declaration -->
+        <h3>Step 3: Availability & Declaration</h3>
+        <label>Available Hours/Week:</label><br>
+        <input type="range" name="hours" min="0" max="60" value="30" oninput="document.getElementById('hourValue').innerText = this.value + ' hrs/week';">
+        <span id="hourValue">30 hrs/week</span><br><br>
+
+        <label>Why do you want this job?</label><br>
+        <textarea name="reason" rows="4" cols="50" placeholder="Explain your interest..."></textarea><br><br>
+
+        <input type="checkbox" name="confirm"> I confirm all provided data is correct.<br><br>
+
+        <input type="submit" value="Submit Application">
+        </fieldset>
+    </form>
 </body>
 </html>
